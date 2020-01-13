@@ -40,15 +40,15 @@ int OnCalculate(const int       TOTAL,
 
 void sma(const double &C[], const int TOTAL, const int PREV)
 {
-	int BEGIN;
+	int begin;
 
 	if (PREV == 0) {
-		BEGIN = 0;
+		begin = 0;
 	} else {
-		BEGIN = PREV - 1;
+		begin = PREV - 1;
 	}
 
-	for (int i = BEGIN; i < TOTAL; i++) {
+	for (int i = begin; i < TOTAL; i++) {
 		double sum = 0.0;
 		for (int j = i - (PERIOD - 1); j <= i; j++) {
 			if (j < 0) {
